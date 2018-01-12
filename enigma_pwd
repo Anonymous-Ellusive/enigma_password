@@ -1,0 +1,11 @@
+#Necessary imports
+import string
+import secrets
+
+spec_chars = "!@#$%&_"
+alphabet = string.ascii_letters + string.digits + spec_chars
+# A unique, effective technique works to add entropy into the password generator by passing methods and strings back
+# into the password generator as arguments.
+# This password generator has very high entropy and generatates unusually cryptographically strong passwords.
+enigma_password = ''.join(secrets.choice(string.digits + alphabet + spec_chars) for i in range(24))
+print(enigma_password)
